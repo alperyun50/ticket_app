@@ -1,4 +1,6 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -8,32 +10,54 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+
+  final appScreens = [
+    const HomeScreen(),
+    const Center(child: Text("Search")),
+    const Center(child: Text("Tickets")),
+    const Center(child: Text("Profile")),
+  ];
+
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("My Tickets"),
       ),
-      body: Center(
-        child: Text("Ticket info"),
-      ),
+      body: appScreens[_selectedIndex],
+
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
         selectedItemColor: Colors.blueGrey,
+        unselectedItemColor: const Color(0xFF526400),
+        showSelectedLabels: false,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.airplane_ticket),
+            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
             label: "Tickets",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
             label: "Profile",
           ),
         ]
