@@ -3,6 +3,19 @@ import 'package:ticket_app/base/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
+  var test = TestClass(x:1, y:2);
+  print(test.x);
+}
+
+class TestClass{
+  int x;
+  int y;
+
+  TestClass({required this.x, required this.y});
+
+  TestClass copyWith(int? x, int? y){
+    return TestClass(x:x!, y:y!);
+  }
 }
 
 class MyApp extends StatelessWidget {
