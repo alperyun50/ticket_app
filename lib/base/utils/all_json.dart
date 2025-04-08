@@ -113,6 +113,92 @@ List<Map<String, dynamic>> ticketList = [
   },
 
 ];
+
+List<Map<String, dynamic>> hotelList = [
+  {
+    'image': 'city_view.png',
+    'place': 'Open Space',
+    'destination': 'London',
+    'price': 25
+  },
+  {
+    'image': 'hotel_room.png',
+    'place': 'Global Will',
+    'destination': 'London',
+    'price': 40
+  },
+  {
+    'image': 'pool_view.png',
+    'place': 'Tallest Building',
+    'destination': 'Dubai',
+    'price': 68
+  },
+
+  {
+    'image': 'city_view_1.png',
+    'place': 'Open Space',
+    'destination': 'London',
+    'price': 25
+  },
+  {
+    'image': 'hotel_room_1.png',
+    'place': 'Global Will',
+    'destination': 'London',
+    'price': 40
+  },
+  {
+    'image': 'pool_view_1.png',
+    'place': 'Tallest Building',
+    'destination': 'Dubai',
+    'price': 68
+  },
+
+  {
+    'image': 'city_view_2.png',
+    'place': 'Open Space',
+    'destination': 'London',
+    'price': 25
+  },
+  {
+    'image': 'hotel_room_2.png',
+    'place': 'Global Will',
+    'destination': 'London',
+    'price': 40
+  },
+  {
+    'image': 'pool_view_2.png',
+    'place': 'Tallest Building',
+    'destination': 'Dubai',
+    'price': 68
+  },
+
+  {
+    'image': 'city_view_3.png',
+    'place': 'Open Space',
+    'destination': 'London',
+    'price': 25
+  },
+  {
+    'image': 'hotel_room_3.png',
+    'place': 'Global Will',
+    'destination': 'London',
+    'price': 40
+  },
+  {
+    'image': 'pool_view_3.png',
+    'place': 'Tallest Building',
+    'destination': 'Dubai',
+    'price': 68
+  },
+
+  {
+    'image': 'hotel_room_4.png',
+    'place': 'Global Will',
+    'destination': 'London',
+    'price': 40
+  },
+];
+
 class AppRoutes{
 
   static const homePage = "/";
