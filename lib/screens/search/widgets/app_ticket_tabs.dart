@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppTicketTabs extends StatelessWidget {
-  const AppTicketTabs({super.key});
+  final String firstTab;
+  final String secondTab;
+
+  const AppTicketTabs({super.key, required this.firstTab, required this.secondTab});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Container(
       decoration: BoxDecoration(
@@ -15,8 +17,8 @@ class AppTicketTabs extends StatelessWidget {
 
       child: Row(
          children: [
-          AppTabs(tabText: "All Tickets", ),
-          AppTabs(tabText: "Hotels", tabBorder: true, tabColor: true,),
+          AppTabs(tabText: firstTab, ),
+          AppTabs(tabText: secondTab, tabBorder: true, tabColor: true,),
          ]
       ),
     );
