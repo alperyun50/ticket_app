@@ -23,10 +23,10 @@ class TicketView extends StatelessWidget {
  
     return SizedBox(
       width: size.width * 0.85,
-      height: 189,
+      height: 180,
+
       child: Container(
         margin: EdgeInsets.only(right: wholeScreen == true ? 0 : 16),
-
         child: Column(
           children: [
             // blue part of tickets
@@ -136,8 +136,8 @@ class TicketView extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isColor == null ? AppStyles.ticketOrange : AppStyles.ticketColor,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(21),
-                  bottomRight: Radius.circular(21),
+                  bottomLeft: Radius.circular(isColor == null ? 21 : 0),
+                  bottomRight: Radius.circular(isColor == null ? 21 : 0),
                 ),
               ),
               child: Column(
@@ -150,16 +150,19 @@ class TicketView extends StatelessWidget {
                         topText: ticket["date"], 
                         bottomText: "DATE",
                         alignment: CrossAxisAlignment.start,
+                        isColor: isColor,
                       ),
                       AppColumnTextLayout(
                         topText: ticket["departure_time"], 
                         bottomText: "Departure time",
                         alignment: CrossAxisAlignment.center,
+                        isColor: isColor,
                       ),
                       AppColumnTextLayout(
                         topText: ticket["number"].toString(), 
                         bottomText: "Number",
                         alignment: CrossAxisAlignment.end,
+                        isColor: isColor,
                       ),
                      ],
                   ),

@@ -39,13 +39,13 @@ class AppStyles {
 
   static TextStyle headLineStyle3 = TextStyle(
     fontSize: 17,
-    color: textColor,
+    //color: textColor,
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle headLineStyle4 = TextStyle(
     fontSize: 14,
-    color: textColor,
+    color: Colors.grey.shade500,
     fontWeight: FontWeight.w500,
   );
 }
