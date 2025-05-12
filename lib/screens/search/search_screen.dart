@@ -7,6 +7,7 @@ import 'package:ticket_app/screens/search/widgets/app_text_icon.dart';
 import 'package:ticket_app/screens/search/widgets/app_ticket_tabs.dart';
 import 'package:ticket_app/screens/search/widgets/find_tickets.dart';
 import 'package:ticket_app/screens/search/widgets/ticket_promotion.dart';
+import 'package:ticket_app/base/utils/app_routes.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
